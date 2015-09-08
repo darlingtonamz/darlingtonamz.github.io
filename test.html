@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Tester</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div>
-		<div id="bot">Minimize</div><br>
-		<ul id="ul1">
-			<li>First</li>
-			<li>Second</li>
-			<li>Third</li>
-			<li>Fourth</li>
-			<li>Fifth</li>
-			<li>Sixth</li>
-		</ul>
-	</div>
-	<div id="clickme">
-  Click here
-</div>
-<img id="book" src="img/1.jpg" alt="" width="100" height="123"
-  style="position: relative; left: 10px;">
-	
-	<script src="js/jquery.js"></script>
-	<script>
-			$( "#bot" ).click(function() {
-				$( "#ul1" ).animate({
-					height: "toogle"
-				}, 1000, function() {});
-			});
-
-		$( "#clickme" ).click(function() {
-		  $( "#ul1" ).animate({
-		    height: "toggle"
-		  }, 1000, function() {});
-		});
-	</script>
+		<div id="card1" class="rblock shad">
+			<div class="rblockhead">General background</div>
+			<hr>
+			<div class="rblockbody">
+				<span>
+					<img class="circle" src="img/1.jpg"><br>
+					<span class="text36">Amanze Ogbonna</span>
+				</span>
+				<table class="text18" cellspacing="12px">
+					<tr>
+						<td><img src="img/phone.png"></td>
+						<td><span>(234) 8037989188</span></td>
+					</tr>
+					<tr>
+						<td><img src="img/mobile.png"></td>
+						<td><span>(233) 205041582</span></td>
+					</tr>
+					<tr>
+						<td><img src="img/email.png"></td>
+						<td><span>darlingtonamz@gmail.com</span></td>
+					</tr>
+				</table>
+					<!-- <div class="cinfo"><img src="img/phone.png"> <span>(234) 8037989188</span></div>
+					<div class="cinfo"><img src="img/mobile.png"> <span>(233) 205041582</span></div>
+					<div class="cinfo"><img src="img/email.png"> <span>darlingtonamz@gmail.com</span></div> -->
+				
+			</div>
+			
+		</div>
 </body>
 </html>
