@@ -40,7 +40,11 @@ $(window).scroll(function() {
 		});
 	$( "#card2" ).click(function() {
 		swap("#card2");		
-		bgchange();
+		$('div.mainhead').animate({opacity: 0}, 'slow', function() {
+	        $(this)
+	            .css({'background-image': 'url(img/about.jpg)'})
+	            .animate({opacity: 1});
+	    });
 	});
 
 	$( "#card3" ).click(function() {
@@ -74,7 +78,7 @@ $(window).scroll(function() {
 		    	$('div.mainhead')
 			    .animate({opacity: 0}, 'slow', function() {
 			        $(this)
-			            .css({'background-image': 'url(img/sunset.jpg)'})
+			            .css({'background-image': 'url(img/fabric.jpg)'})
 			            .animate({opacity: 1});
 			    });
 		        break;
