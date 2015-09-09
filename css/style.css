@@ -51,6 +51,7 @@ body {
 .grey{
 	/*background-color: #fafafa;*/
 	padding-top: 30px;
+	margin-bottom: 100px;
 }
 .content:before {
   
@@ -146,6 +147,7 @@ border-color: transparent;
 .fill { 
     min-height: 100%;
     height: 100%;
+
 }
 
 .cinfo{
@@ -233,6 +235,5 @@ a, .grow, #card1 {
  }
 // resume end
 
-footer{
-	bottom: 0;
+.ft{
 }
