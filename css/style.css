@@ -9,7 +9,7 @@ body {
   background-color: #DFDFDF;
 	//background-image: linear-gradient(to bottom, #DDDBD1, #D2DBDC);
 	background-image: url("../img/mat_dark.jpg");	
-   // background-size: cover;
+   background-size: cover;
    font-family:"Roboto",sans-serif;
 }
 .rblock{
@@ -79,9 +79,9 @@ body {
 	color: #ffffff;
 	text-shadow: 1px 1px 1px #658668;
 }
+
 .inmain img{
 	border-radius: 50%;
-	box-shadow: 2px 2px 2px #658668;
 }
 .smallimg{
 	width: 100px; height: 100px;
@@ -90,14 +90,17 @@ body {
 	font-style: bold;
 }
 .mainhead{
-	background: transparent url("../img/city.jpg") repeat scroll 0% 0% / cover;
+	//background: url("../img/city.jpg");
+	background: url("../img/about.jpg");
+	background-size: cover;
+	box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.2);
 	height: 200px;
 	color: rgb(255, 255, 255);
 }
 .slim{padding: 0px}
 .rblockbody{
 	color: #2E6E60;
-	font-size: 12px;
+	font-size: 16px;
 	margin-top: 10px;
 	text-align: center;
 }
@@ -115,9 +118,7 @@ border-color: transparent;
 }
 #navcont img{
 	border-radius: 50%; width: 50px; height: 50px;
-	margin: 10px;
-	box-shadow: 2px 2px 2px #658668;
-	
+	margin: 10px;	
 }
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.05); }
@@ -180,4 +181,58 @@ a, .grow, #card1 {
 
 #card1 .rblockbody span .circle{
 	margin-top: -100px;
+}
+#card1 .rblockhead div.ctitle{
+	padding: 15px;
+}
+.over{overflow: auto}
+#resumeProficiencies{padding: 15px}
+
+// resume start
+#resumeProficiencies {
+	float: left;
+	clear: right;
+	width: 500px;
+	margin: 20px 0px 30px 30px;
+}
+
+#resumeProficienciesBottom {
+	clear: right;
+	width: 80%;
+	margin: 2px 0px 0px 0px;
+}
+
+.progress {
+	background:#e9e5e2;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#e9e5e2));
+	background-image: -webkit-linear-gradient(top, #dddddd, #e9e5e2);
+	background-image: -moz-linear-gradient(top, #dddddd, #e9e5e2);
+	background-image: -ms-linear-gradient(top, #dddddd, #e9e5e2);
+	background-image: -o-linear-gradient(top, #dddddd, #e9e5e2);
+	background-image: linear-gradient(top, #dddddd, #e9e5e2);  
+	height:20px; 
+	border-radius: 0px;
+	-moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	 
+	-webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	 
+	box-shadow: 0 1px 0px #bbbbbb inset, 0 1px 0 #fcfcfc;	  
+}
+
+.adobe, .html, .css, .jquery, .javascript, .bootstrap, .wordpress, .ui, .ux, .rwd, .mobile, .rapidproto {
+
+ -webkit-transition: width 4.50s ease !important;
+ -moz-transition: width 4.50s ease !important;
+   -o-transition: width 4.50s ease !important;
+      transition: width 4.50s ease !important;
+ }
+
+ .progress-bar-info{
+ 	text-align: left;
+	font-size: 14px;
+	padding-left: 10px;
+	background-color: #009688;
+ }
+// resume end
+
+footer{
+	bottom: 0;
 }
