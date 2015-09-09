@@ -33,11 +33,11 @@ $(window).scroll(function() {
 	    }
 	});
 
-	$( "#card1" ).click(function() {
+	/*$( "#card1" ).click(function() {
 		  $( "#card1 .rblockbody" ).animate({
 		    height: "toggle"
 		  }, 1000, function() {});
-		});
+		});*/
 	$( "#card2" ).click(function() {
 		swap("#card2");		
 		$('div.mainhead').animate({opacity: 0}, 'slow', function() {
@@ -137,3 +137,18 @@ $(window).scroll(function() {
   $('.mobile').css('width', '85%');
   $('.rapidproto').css('width', '95%');
 });
+
+	function initMap() {
+  var myLatLng = {lat: -25.363, lng: 131.044};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+}
