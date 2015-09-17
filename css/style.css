@@ -139,7 +139,7 @@ border-color: transparent;
     transition: all 0.4s ease;
 }
 
-#card3, #card2, #card4{
+#card3, #card2, #card4, #card5{
 	max-height: 100px;
 	overflow: hidden;
 }

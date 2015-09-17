@@ -55,6 +55,10 @@ $(window).scroll(function() {
 		swap("#card4");
 		bgchange();
 	});
+	$( "#card5" ).click(function() {
+		swap("#card5");
+		bgchange();
+	});
 
 	function bgchange(){
 		switch(getRandomInt(0,3)) {
