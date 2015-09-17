@@ -17,7 +17,7 @@ public class Calculator{
 	public static void modulus(float first, float second){
 		System.out.println("Modulus Result of "+first+" & "+second+": " + (first % second));
 	}
-	public static void average(float first, float second){
+	public static void average(int first, int second){
 		System.out.println("Average Result of "+first+" & "+second+": " + ((first + second)/2));
 	}
 	public static void squareRoot(float first){
@@ -54,7 +54,7 @@ public class Calculator{
 			}else if(resp == 5){
 				modulus(a,b);
 			}else if(resp == 6){
-				average(a,b);
+				average(Math.round(a),Math.round(b));
 			}else if(resp == 7){
 				squareRoot(a);
 			}else{
