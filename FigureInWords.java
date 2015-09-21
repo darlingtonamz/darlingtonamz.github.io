@@ -38,22 +38,17 @@ public class FigureInWords{
       		return less_20[num];
 		}else if((num >= 20) && (num <= 90) && (num%10 == 0)){
       		return tens[(num/10) - 2];
-		}
-      	else if(isBtw(num,20,99)){
+		}else if(isBtw(num,20,99)){
 	      int tens = (num / 10) * 10;
 	      int ones = num % 10;
 	      return inWords(tens) + "-"+ inWords(ones);
-	  	}
-    	else if(isBtw(num,100,999)){
+	  	}else if(isBtw(num,100,999)){
       		return unify(num,100,"hundred");
-    	}
-    	else if(isBtw(num,1000,999999)){
+    	}else if(isBtw(num,1000,999999)){
       		return unify(num,1000,"thousand");
-    	}
-    	else if(isBtw(num,1000000,999999999)){
+    	}else if(isBtw(num,1000000,999999999)){
       		return unify(num,1000000,"million");
-    	}
-    	else if(isBtw(num,1000000000, 2147483647)){
+    	}else if(isBtw(num,1000000000, 2147483647)){
       		return unify(num,1000000000,"billion");
     	}else{return "";}
 	}
@@ -66,7 +61,7 @@ public class FigureInWords{
 	    }else{
 	      return inWords(unit)+" "+name;
 	    }
-    }
+	}
 
 	public static boolean isBtw(int x, int lower, int upper){
 		return (lower <= x) && (x <= upper);
