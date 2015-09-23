@@ -36,6 +36,7 @@ $( "#butstart" ).click(function() {
 		denomInit(changing);
 		numInit(changing2);
 		started = true;
+		console.log("Butstart working");
 });
 /*$( document ).click(function() {
   $( "#butstart" ).effect( "shake" );
@@ -123,7 +124,7 @@ function denomInit(state){
 function numInit(state){
 	if (!state) {  
 		changeNum();
-		denomHandler=setInterval(function(){changeNum()},10000);
+		numHandler=setInterval(function(){changeNum()},10000);
 		changing2 = true;
 	}
 }
@@ -151,7 +152,7 @@ function changeNum(){
 	};
 
 	butStat = [true,true,true,true,true,true,true,true,true];
-}
+};
 /*var myVar=setInterval(function(){myTimer()},1000);
 
 function myTimer() {
@@ -160,3 +161,4 @@ function myTimer() {
 }*/
 
 //clearInterval(myVar);
+//}

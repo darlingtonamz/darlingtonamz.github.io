@@ -1,7 +1,10 @@
+$(document).on("pageinit",function(){
+  alert("pageinit event fired!")
+});
 $(window).scroll(function() {
 	    /*console.log("Scrolling @: " + $(this).scrollTop());*/
 	    var info = $("#nametext").html();
-	    console.log(info);
+	    //console.log(info);
 	    if ($(this).scrollTop() > 100){  
 	    	if ($("#navcont").html().length < 1){
 		        //$('#nametext').addClass("sticky");
@@ -53,6 +56,7 @@ $(window).scroll(function() {
 	});
 	$( "#card4" ).click(function() {
 		swap("#card4");
+		cred();
 		bgchange();
 	});
 	$( "#card5" ).click(function() {
@@ -126,7 +130,7 @@ $(window).scroll(function() {
 	}
 
 	// resume
-	$(document).ready(function() {
+function cred() {
   $('.adobe').css('width', '100%');
   $('.html').css('width', '100%');
   $('.css').css('width', '100%');
@@ -140,19 +144,4 @@ $(window).scroll(function() {
   $('.rwd').css('width', '85%');
   $('.mobile').css('width', '85%');
   $('.rapidproto').css('width', '95%');
-});
-
-	function initMap() {
-  var myLatLng = {lat: -25.363, lng: 131.044};
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: myLatLng
-  });
-
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'Hello World!'
-  });
-}
+};
