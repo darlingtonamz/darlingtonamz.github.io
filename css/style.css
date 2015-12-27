@@ -15,7 +15,7 @@ body {
    font-family:"Roboto",sans-serif;
 }
 .rblock{
-	background-color: #fafafa;
+	background-color: #f7f7f7;
 	border-radius: 2px;
 	margin: 10px;
 	padding: 10px
@@ -95,9 +95,10 @@ body {
 }
 .mainhead{
 	//background: url("../img/city.jpg");
-	background: url("../img/fabric.jpg");
+	//background: url("../img/fabric.jpg");
+	background:#01B6A5;
 	background-size: cover;
-	box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.2);
+	//box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.2);
 	height: 200px;
 	color: rgb(255, 255, 255);
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -196,6 +197,7 @@ a, .grow, #card1 {
 }
 #card1 .rblockhead div.ctitle{
 	padding: 15px;
+	font-size: 1.4em;
 }
 .over{overflow: auto}
 #resumeProficiencies{padding: 15px}

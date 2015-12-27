@@ -3,30 +3,39 @@ $( "#but1" ).click(function() {
 		ifCorrect("#but1",resp)	*/
 		exec("#but1",0);
 });
+
 $( "#but2" ).click(function() {
 		exec("#but2",1);	
 });
+
 $( "#but3" ).click(function() {
 		exec("#but3",2);
 });
+
 $( "#but4" ).click(function() {
 		exec("#but4",3);
 });
+
 $( "#but5" ).click(function() {
 		exec("#but5",4);	
 });
+
 $( "#but6" ).click(function() {
 		exec("#but6",5);
 });
+
 $( "#but7" ).click(function() {
 		exec("#but7",6);	
 });
+
 $( "#but8" ).click(function() {
 		exec("#but8",7);
 });
+
 $( "#but9" ).click(function() {
 		exec("#but9",8);
 });
+
 //-------------
 $( "#buth" ).click(function() {
 		changeNum();
