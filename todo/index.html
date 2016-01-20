@@ -10,9 +10,13 @@
 	<div class="container">
 	  <div class="row inpHolder">
 	    <div class='card'>
-	      <input placeholder="Title..." class="target" id="title"/>
-	      <input placeholder="Start" class="target" id="datetimepickerStart"/>
-	      <input placeholder="End" class="target" id="datetimepickerEnd"/>    
+	      <input placeholder="Title..." class="target" id="title" required/>
+	      <input placeholder="Start" class="target" id="datetimepickerStart" readonly='true'/>
+	      <input placeholder="End" class="target" id="datetimepickerEnd" readonly='true'/>  
+	      <div class='row hold'>
+	        <div class='col-xs-6 dialogbut' id='add'>Add</div>
+	        <div class='col-xs-6 dialogbut' id='cancel'>Cancel</div>
+	      </div>
 	    </div>
 	  </div>
 	  <header></header>
@@ -23,18 +27,21 @@
 	      </div>
 	    </div>
 	    <div class="col-md-4">
-	      <div class="card">
+	      <div id='inprog' class="card">
 	        In - Progress
 	      </div>
 	    </div>
 	    <div class="col-md-4">
-	      <div class="card">
+	      <div id='complete' class="card">
 	        Completed
 	      </div>
 	    </div>
 	  </div>
+	  <button id='addBut' class='accent circle stray'><span class="glyphicon glyphicon-plus"></span></button>
 	  
 	</div>
+
+
 
 	<script src="../js/jquery.js"></script>
 	<script src="js/main.js"></script>

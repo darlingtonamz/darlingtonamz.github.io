@@ -3,18 +3,6 @@ $(function() {
   $('#datetimepickerEnd').datetimepicker();
 });
 
-$(document).keypress(function(e) {
-    if(e.which == 13 && $('.inpHolder').is(':visible')) {
-        alert('You pressed enter!');
-    }
-});
-
-var date;
-$('#yts').on('click', function(){  
-  date = getEpoch($('#datetimepicker').val());
-  console.log('val: '+$('#datetimepicker').val()+' | now: '+$.now()+' | '+date);
-});
-
 function getEpoch(d){
   var split = d.split('/');
   var third = split[2];
@@ -37,3 +25,62 @@ function getEpoch(d){
   console.log(out);
   return out;
 }
+
+function toggleIt(){
+  if ($('.inpHolder').is(':visible')){
+    $('.inpHolder').hide(400);
+    $('#addBut').show(400);
+  }else{
+    $('.inpHolder').show(400);
+    $('#addBut').hide(400);
+  }
+}
+
+$('#addBut, #cancel').on('click', function(){
+  toggleIt();
+});
+var todo = [];
+/*var date;
+$('#yts').on('click', function(){  
+  date = getEpoch($('#datetimepicker').val());
+  console.log('val: '+$('#datetimepicker').val()+' | now: '+$.now()+' | '+date);
+});*/
+function addTodo(){
+  console.log('todo');
+  var title = $('#title').val();
+  var start = getEpoch($('#datetimepickerStart').val());
+  var end = getEpoch($('#datetimepickerEnd').val());
+  console.log(start+' : '+end);
+  if (start >= end){
+    alert('Invalid range: End datte is less than Start date');
+    return;
+  }
+  
+  var mTodo = {
+    'title': title,
+    'start': start,
+    'end'  : end
+  };
+  
+  todo.push(mTodo);
+  var now = $.now() / 1000;
+  var row = $('<div>', {class:'row'});
+  var top = $('<div>', {class:'hold space top'}).text(title);
+  var bottom = $('<div>', {class:'hold al-right'});
+  var bleft = $('<div>', {class:'col-xs-6 green'}).text($('#datetimepickerStart').val());
+  var bright = $('<div>', {class:'col-xs-6 red'}).text($('#datetimepickerEnd').val());
+  bottom.append(bleft, bright);
+  row.append(top, bottom);
+  
+  if(start > now)
+    $('#yts').append(row);
+  else if(start <= now && end > now)
+    $('#inprog').append(row);
+  else
+    $('#complete').append(row);
+}
+
+$('#add').on('click', function(){
+  console.log('wertyuio');
+  addTodo();
+});
