@@ -1,0 +1,79 @@
+html,body{
+  color: #9E9E9E;
+  background-color: #EFEFEF;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.card, .ui-datepicker {
+  padding:1.5rem;
+  box-shadow:0 1px 2px #aaa;
+  background:white;
+  margin:0 1rem 1rem;
+  border-radius:3px;
+  user-select:none;
+  animation:fly-in-from-left .5s 1s ease both;
+  transform-origin:top left;  
+  transition: all 0.2s ease;
+}
+
+.card:nth-child(even){
+  animation-name:fly-in-from-right;
+  animation-delay:1.1s;
+ transform-origin:top right;
+}
+
+@keyframes fly-in-from-left {
+  from {
+    transform:translateY(15rem) rotate(15deg);
+    opacity:0;
+  }
+}
+
+@keyframes fly-in-from-right {
+  from {
+    transform:translateY(15rem) rotate(-15deg);
+    opacity:0;
+  }
+}
+
+.card:hover{
+  -webkit-box-shadow:0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	-moz-box-shadow:0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	box-shadow:0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+header {
+  position:absolute;
+  z-index:0;
+  top:0; left:0; right:0;
+  height:10rem;
+  transition:transform .5s, opacity .3s;
+  background:url(http://www.droid-life.com/wp-content/uploads/2013/01/googlenownewyork.png)  center center;
+  background-size:cover;
+}
+
+input, .card {
+  position:relative;
+  z-index:2;
+}
+
+.inpHolder{
+  padding: 0px 10px 0px 10px;
+  max-width: 500px;
+  margin: 50px auto 30px auto;
+}
+
+input {
+  width: 95%;
+  margin: 10px auto 10px auto;
+  border: none;
+}
+
+input:focus{
+  border-bottom: solid 1px #ccc;
+}
+
