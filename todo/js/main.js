@@ -1,3 +1,16 @@
+$('.btn').on('click', function(event){
+    //event.preventDefault();
+    var check = $('#checkBox').prop;
+
+    if (check) {
+      $('#pName').text($('#inputEmail').val());
+      $('#pImg').html('<img src="'+ $('#profile-img').attr('src') +'"/>');
+        $('#loginContainer').hide(400);
+        $('#todoContainer').removeClass('hidden');
+    };
+    return false;
+});
+
 $(function() {
   $('#datetimepickerStart').datetimepicker();
   $('#datetimepickerEnd').datetimepicker();
@@ -46,13 +59,19 @@ $('#yts').on('click', function(){
   console.log('val: '+$('#datetimepicker').val()+' | now: '+$.now()+' | '+date);
 });*/
 function addTodo(){
-  console.log('todo');
+  //console.log('todo');
   var title = $('#title').val();
   var start = getEpoch($('#datetimepickerStart').val());
   var end = getEpoch($('#datetimepickerEnd').val());
-  console.log(start+' : '+end);
+  //console.log(start+' : '+end);
   if (start >= end){
     alert('Invalid range: End datte is less than Start date');
+    return;
+  }
+  
+  if(inRange(start)){
+    console.log(true);
+    alert('A todo within your range already exist');
     return;
   }
   
@@ -78,9 +97,29 @@ function addTodo(){
     $('#inprog').append(row);
   else
     $('#complete').append(row);
+  
+  clear();
 }
 
 $('#add').on('click', function(){
-  console.log('wertyuio');
   addTodo();
 });
+
+function inRange(s){
+  var inR = false;
+  var i = 0;
+  while(i < todo.length){
+    var e = todo[i];
+    if((e.start <= s) && (e.end >= s)){
+      console.log(s+' | '+e.start+' | '+e.end);
+      inR = true;
+      break;
+    }
+    i++;
+  }
+  return inR;
+}
+
+function clear(){
+  $('#title, #datetimepickerStart, #datetimepickerEnd').val('');
+}

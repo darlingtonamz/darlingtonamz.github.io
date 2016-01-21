@@ -4,10 +4,10 @@
 	<title>ToDo by Amanze</title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="http://xdsoft.net/scripts/jquery.datetimepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/datetimepicker.css">
 </head>
 <body>
-	<div class="container">
+	<div id="todoContainer" class="container hidden">
 	  <div class="row inpHolder">
 	    <div class='card'>
 	      <input placeholder="Title..." class="target" id="title" required/>
@@ -38,13 +38,39 @@
 	    </div>
 	  </div>
 	  <button id='addBut' class='accent circle stray'><span class="glyphicon glyphicon-plus"></span></button>
+	  <div class="float">
+    	<div id='pName' class="col-xs-8"></div>
+    	<div id='pImg' class="col-xs-4"><img src="" /></div>
+    </div>
 	  
 	</div>
 
+	<div id="loginContainer" class="container">
+        <div class="card card-container">
+            <img id="profile-img" class="profile-img-card" src="http://findicons.com/files/icons/1072/face_avatars/300/i04.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input id="checkBox" type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>            
+        </div><!-- /card-container -->
+    </div><!-- /container -->
 
 
 	<script src="../js/jquery.js"></script>
 	<script src="js/main.js"></script>
 	<script src="../js/datetimepicker.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 </body>
 </html>
