@@ -2,6 +2,10 @@
 
 > An app to convert Currencies
 
+# Live demo
+
+> https://currency-converter-ea387.firebaseapp.com/#/
+
 ## Build Setup
 
 ``` bash

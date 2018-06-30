@@ -105,7 +105,7 @@ export default {
       }
 
       Axios({
-        url: 'http://free.currencyconverterapi.com/api/v5/currencies',
+        url: 'https://free.currencyconverterapi.com/api/v5/currencies',
         method: 'get'
       })
       .then(res => {
